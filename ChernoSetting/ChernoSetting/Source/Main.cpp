@@ -1,21 +1,35 @@
 #include<iostream>
+#include<string>
 
 class Entity
 {
 public:
-	float x, y;
-
-	void Print()
-	{
-		std::cout << x << "," << y << std::endl;
-	}
+	std::string GetName() { return "Entity"; }
 };
 
+class player : public Entity
+{
+private:
+	std::string m_Name;
+public:
+	player(const std::string& name)
+		: m_Name(name) {}
+
+	std::string GetName() {}
+};
+
+void PrintName(Entity* entity)
+{
+	std::cout << entity->GetName() << std::endl;
+}
 
 int main()
 {
-	Entity e;
-	std::cout << e.x << e.y << std::endl;
-	e.Print();
+	Entity* e = new Entity();
+	PrintName(e);
+
+	Entity* p = new player("Cherno");
+	PrintName(p);
+
 	std::cin.get();
 }
