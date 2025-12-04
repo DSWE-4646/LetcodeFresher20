@@ -1,14 +1,11 @@
 #include<iostream>
-#include<string>
+//#include<string>
 
 int main()
 {
-	int example[5];
-	int* ptr = example;
-	for (int i = 0; i < 5; i++)
-		example[i] = 2;
+	const char* name = "Cherno";
+	char name2[7] = {'C','h','e','r','n','0'}; 
+	//name[2] = 'a';
 
-	example[2] = 5;
-	*(ptr + 8) = 6;
-	*(int*)((char*)ptr + 12) = 6;
+	std::cin.get();
 }
