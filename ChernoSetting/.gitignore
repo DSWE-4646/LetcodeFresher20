@@ -1,0 +1,46 @@
+# ===================== 1. 忽略所有 VS 工程文件（仅保留纯源代码时用） =====================
+*.sln          # 解决方案文件
+*.vcxproj      # 项目文件
+*.vcxproj.filters # 筛选器文件
+*.vcxproj.user # 用户配置文件
+.vs/           # VS 缓存目录
+
+# ===================== 2. 忽略所有编译产物（核心，彻底删除冗余） =====================
+# 编译输出目录
+Debug/
+Release/
+x64/
+x86/
+Win32/
+# 单个编译产物文件
+*.exe
+*.dll
+*.lib
+*.obj
+*.pch
+*.ilk
+*.manifest
+*.res
+*.rsc
+*.exp
+*.tlog
+*.lastbuildstate
+*.build-id
+*.pdb          # 调试符号文件
+*.sdf          # 智能感知数据库
+*.opensdf
+*.vc.db
+*.vc.opendb
+
+# ===================== 3. 忽略临时/备份/日志/压缩文件 =====================
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+*.zip
+*.7z
+*.rar
+*.tar.gz
